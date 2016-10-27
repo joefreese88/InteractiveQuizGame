@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Interactive Quiz Game</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="next">Next</string>
+    <string name="marvel_movie_quiz">Marvel Movie Quiz</string>
+    <string name="this_is_a_fun_quiz_to_test_the_user_on_there_knowledge_on_the_mcu_marvel_cinematic_universe_movies_n_nif_you_have_seen_all_the_movies_in_this_universe_this_quiz_will_be_much_easier_if_not_it_will_be_a_challenge_n_nkeep_in_mind_that_you_must_answer_every_question_before_continuing_to_the_next_and_you_can_apos_t_go_back_good_luck_and_have_fun">This is a fun quiz to test the user on random facts on MCU (Marvel Cinematic Universe) movies. An MCU movie is any movie where the storyline takes place in the same universe as The Avengers movies. \n\nThere are 8 multiple choice questions, and 2 where you input your answer and you must answer every question before continuing to the next, and you can\'t go back. Good Luck and Have Fun!</string>
+    <string name="redo_quiz">Redo Quiz</string>
+    <string name="results">Results</string>
+    <string name="firstRadio">Ne</string>
+    <string name="secondRadio">New R</string>
+    <string name="thirdRadio">New Radi</string>
+    <string name="submit_and_view_results">Submit and View Results</string>
+</resources>
