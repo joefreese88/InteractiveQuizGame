@@ -1,3 +1,12 @@
+/*
+*
+* File: SingleAnswer.java
+* Author: Joseph Donald Freese
+* Created: August 2016
+* Description: An interactive quiz game that tests the users knowledge on Marvel Studios movies
+*
+*/
+
 package net.androidbootcamp.interactivequizgame;
 
 import android.content.Intent;
@@ -12,9 +21,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
-// store everything in the arrayList, but before you go to the MultipleAnswer class, make sure all arrayList items are placed in shared preferences
+// This class displays the layout that will show all questions and perform tasks based on the users input
 public class SingleAnswer extends AppCompatActivity {
 
     // the answers in this array are the true answers and will be compared with the users actual answers to calculate final results
@@ -33,14 +41,14 @@ public class SingleAnswer extends AppCompatActivity {
 
     String combineString = "";     // combines all the string explanations together to be passed to the next activity
 
-    // declare radio group and buttons
+    // declare radio group and radio buttons
     RadioGroup questionGroup;
     RadioButton radioButtonOne;
     RadioButton radioButtonTwo;
     RadioButton radioButtonThree;
     RadioButton radioButtonFour;
 
-    // declare buttons
+    // declare buttons, edit texts, and text views
     Button next;
     Button submit;
     EditText numberEntry;
