@@ -3,7 +3,8 @@
 * File: SingleAnswer.java
 * Author: Joseph Donald Freese
 * Created: August 2016
-* Description: An interactive quiz game that tests the users knowledge on Marvel Studios movies
+* Description: displays the layout that will show all questions
+*              and perform tasks based on the users input.
 *
 */
 
@@ -22,10 +23,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-// This class displays the layout that will show all questions and perform tasks based on the users input
 public class SingleAnswer extends AppCompatActivity {
 
-    // the answers in this array are the true answers and will be compared with the users actual answers to calculate final results
+    // This array stores the true answers and will be compared with the users actual answers to calculate final results
     String[] correctAnswers = {"13", "Doctor Strange ", "6 ", "The Amazing Spiderman ", "Mjolnir ", "Daredevil ", "7", "Steve Rogers ", "Hawkeye ", "Ronan "};
 
     ArrayList<String> userAnswers = new ArrayList<>();  // users answers will be stored in this list
@@ -64,14 +64,14 @@ public class SingleAnswer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_answer);
 
-        // set the buttons and textviews
+        // initialize the buttons and textviews
         next = (Button) findViewById(R.id.next_Btn);
         submit = (Button) findViewById(R.id.Submit_btn);
         numberEntry = (EditText) findViewById(R.id.enterNumber_txt);
         questionNumber = (TextView) findViewById(R.id.number_txt);
         questionText = (TextView) findViewById(R.id.Question_txt);
 
-        // set the radio buttons and radio group
+        // initialize the radio buttons and radio group
         radioButtonOne = (RadioButton) findViewById(R.id.answerOne_radioBtn);
         radioButtonTwo = (RadioButton) findViewById(R.id.answerTwo_radioBtn);
         radioButtonThree = (RadioButton) findViewById(R.id.answerThree_radioBtn);
@@ -79,8 +79,7 @@ public class SingleAnswer extends AppCompatActivity {
         questionGroup=(RadioGroup)findViewById(R.id.radioGroup);
 
         // display the first question and make sure only the edit text is displayed so the user can input their answer
-        if (questionCount == 1)
-        {
+        if (questionCount == 1) {
             questionText.setText("How many MCU movies are their as of August 2016?");
             radioButtonOne.setVisibility(View.INVISIBLE);
             radioButtonTwo.setVisibility(View.INVISIBLE);
@@ -103,17 +102,17 @@ public class SingleAnswer extends AppCompatActivity {
             }
         });
 
-        // when the next button is clicked, the selected user answer is added to the arrayList, and the next question is displayed
+        // when the 'NEXT' button is clicked, the selected user answer is added to the arrayList, and the next question is displayed
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                    // Switch statement that will start at case 1 and go to the next case the next time the 'NEXT' button is clicked
                     switch (questionCount) {
                             case 1:
 
                                 // if nothing is input, then a message displays telling the user to input a number before continuing
-                                if (numberEntry.getText().toString().isEmpty())
-                                {
+                                if (numberEntry.getText().toString().isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please input a number!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -148,8 +147,7 @@ public class SingleAnswer extends AppCompatActivity {
                             case 2:
 
                                 // if no choice is selected, display a message so the user knows to answer before continuing
-                                if (selected.isEmpty())
-                                {
+                                if (selected.isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please make a selection!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -171,8 +169,7 @@ public class SingleAnswer extends AppCompatActivity {
                             case 3:
 
                                 // if no choice is selected, display a message so the user knows to answer before continuing
-                                if (selected.isEmpty())
-                                {
+                                if (selected.isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please make a selection!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -195,8 +192,7 @@ public class SingleAnswer extends AppCompatActivity {
                             case 4:
 
                                 // if no choice is selected, display a message so the user knows to answer before continuing
-                                if (selected.isEmpty())
-                                {
+                                if (selected.isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please make a selection!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -218,8 +214,7 @@ public class SingleAnswer extends AppCompatActivity {
                             case 5:
 
                                 // if no choice is selected, display a message so the user knows to answer before continuing
-                                if (selected.isEmpty())
-                                {
+                                if (selected.isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please make a selection!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -242,8 +237,7 @@ public class SingleAnswer extends AppCompatActivity {
                             case 6:
 
                                 // if no choice is selected, display a message so the user knows to answer before continuing
-                                if (selected.isEmpty())
-                                {
+                                if (selected.isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please make a selection!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -271,8 +265,7 @@ public class SingleAnswer extends AppCompatActivity {
                             case 7:
 
                                 // if nothing is input, then a message displays telling the user to input a number before continuing
-                                if (numberEntry.getText().toString().isEmpty())
-                                {
+                                if (numberEntry.getText().toString().isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please input a number!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -307,8 +300,7 @@ public class SingleAnswer extends AppCompatActivity {
                             case 8:
 
                                 // if no choice is selected, display a message so the user knows to answer before continuing
-                                if (selected.isEmpty())
-                                {
+                                if (selected.isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please make a selection!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -328,8 +320,7 @@ public class SingleAnswer extends AppCompatActivity {
                             case 9:
 
                                 // if no choice is selected, display a message so the user knows to answer before continuing
-                                if (selected.isEmpty())
-                                {
+                                if (selected.isEmpty()) {
                                     Toast.makeText(SingleAnswer.this, "Please make a selection!", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -358,8 +349,7 @@ public class SingleAnswer extends AppCompatActivity {
             public void onClick(View view) {
 
                 // if no answer to the final question is selected, then display the message so the user can select an answer
-                if (selected.isEmpty())
-                {
+                if (selected.isEmpty()) {
                     Toast.makeText(SingleAnswer.this, "Please make a selection!", Toast.LENGTH_SHORT).show();
                 }
 
@@ -380,16 +370,14 @@ public class SingleAnswer extends AppCompatActivity {
     }
 
     // a quick void method to clear the checkmark from the radio button, add the users answer, and reset the selected answer to null
-    public void clearAndDisplay()
-    {
+    public void clearAndDisplay() {
         questionGroup.clearCheck();
         userAnswers.add(selected);
         selected = "";
     }
 
     // a method to compare the user answers with actual answers
-    public void checkAnswers()
-    {
+    public void checkAnswers() {
         // for loop to loop through all users answers and the actual answers
         for (int i = 0; i < 10; i++)
         {

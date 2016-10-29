@@ -1,3 +1,12 @@
+/*
+*
+* File: ResultsActivity.java
+* Author: Joseph Donald Freese
+* Created: August 2016
+* Description: This class displays the layout that shows the results for the users quiz answers
+*
+*/
+
 package net.androidbootcamp.interactivequizgame;
 
 import android.content.Intent;
@@ -25,7 +34,7 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-        // set the textview and redo quiz button
+        // initialize the textview and redo quiz button
         redo = (Button) findViewById(R.id.Redo_btn);
         show = (TextView) findViewById(R.id.Show_txt);
         result = (TextView) findViewById(R.id.results_txt);
@@ -48,7 +57,5 @@ public class ResultsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 }
